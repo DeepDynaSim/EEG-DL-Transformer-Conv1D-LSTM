@@ -18,6 +18,46 @@ Model evaluation through classification reports, ROC curves, and Cohen's kappa s
 Application in EEG Signal Processing
 This approach demonstrates a robust framework for processing EEG signals using deep learning. The combination of CNNs, LSTMs, and Transformers is particularly powerful for EEG data, as it captures both spatial and temporal dynamics, along with the ability to focus on the most relevant parts of the signal. Such a model could be applied to a variety of tasks in neurology and cognitive science, from diagnosing neurological disorders to developing efficient BCIs. The detailed evaluation and visualization techniques included in the code provide a comprehensive understanding of model performance, crucial for scientific and medical applications where interpretability and reliability are paramount.
 
+
+![image](https://github.com/DeepDynaSim/EEG-DL-Transformer-Conv1D-LSTM/assets/35817872/402fdae4-1ca3-45dc-a070-0834a70c8dd0)
+
+The pipeline depicted in the image is a flowchart outlining the process of EEG signal acquisition, processing, feature extraction, classification, and evaluation for brain signal analysis using deep learning methods. Here's a detailed explanation of each step:
+
+EEG Signal Acquisition:
+
+Duration & Sampling: EEG data is recorded for 3 minutes at a sampling rate of 125Hz.
+International 10/20 Nomenclature: This refers to the standardized method of placing EEG electrodes on the scalp.
+19 Channel Electrodes: EEG data is collected using 19 electrodes, providing multiple channels of brain activity data.
+Pre-processing:
+
+Artifact Removal: This step involves cleaning the EEG data by removing non-brain activity signals like muscle movements or eye blinks.
+Filtering: The EEG signal is filtered to remove noise and enhance signal quality.
+Independent Component Analysis (ICA): A computational method to separate mixed signals into their independent sources, often used in EEG to isolate artifacts.
+Feature Extraction:
+
+Temporal and Spatial: This involves extracting features over time and space from the EEG signals to identify patterns associated with different brain states or activities.
+Convolutional Processes: Employing convolutional operations to detect spatial features, activated by a ReLU function, and pooling to reduce dimensionality.
+The diagram indicates that this step is performed on the cloud, suggesting computational and storage resources off the local machine.
+Classification:
+
+Lists LSTM, CNN1D, and GRU as algorithms for classification, which are types of neural network architectures suitable for time-series data like EEG.
+This step involves feeding the extracted features through these networks, which are composed of input layers, hidden layers, and output layers, to determine the class labels for the EEG signals.
+Web Interface of the Model:
+
+Cloud Server: Indicates that the model is hosted on a cloud server, enabling remote access and computation.
+Model Selection Interface: Likely a user interface to choose among different models or configurations.
+Import Raw Data: A feature for users to upload EEG datasets.
+Class Prediction: The interface would display the predicted classification of the EEG signals.
+Model Evaluation:
+
+Confusion Matrix: A table used to describe the performance of a classification model by comparing the predicted and actual values.
+ROC Curve: Receiver Operating Characteristic curve visualizes the true positive rate against the false positive rate at various threshold settings, a tool to evaluate the classifier's performance.
+AUC, Acc, Kappa: Metrics for evaluating the model:
+AUC: Area Under the ROC Curve, representing the model's ability to discriminate between classes.
+Acc: Accuracy, the ratio of correctly predicted instances over the total instances.
+Kappa: Cohen's Kappa score, a statistical measure of inter-rater reliability for categorical items.
+The pipeline represents a comprehensive system for analyzing and classifying EEG data using deep learning. It shows the process from the initial acquisition of EEG signals through to the prediction of classes and the evaluation of the model's performance. Each step builds on the previous to process, learn from, and make predictions based on brain signal data, potentially for applications such as medical diagnosis, monitoring, or brain-computer interfaces.
+
 EEG-DL Transformer+Conv1D+LSTM.ipynb
 
 This code outlines a comprehensive approach for constructing, training, evaluating, and visualizing the performance of a hybrid deep learning model using TensorFlow and Keras. It's designed for classification tasks and integrates Convolutional Neural Networks (CNNs), Long Short-Term Memory networks (LSTMs), and Transformer encoder layers, showcasing a sophisticated blend of modern neural network architectures.
