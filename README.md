@@ -1,5 +1,25 @@
-# EEG-DL-Transformer-Conv1D-LSTM
-EEG Signal Processing Using Deep Learning Methods
+# EEG Deep Learning: Conv1D, LSTM and Transformers
+
+**DeepDynaSim collection | Signal processing and machine learning | Research notebook**
+
+Explore neural architectures for EEG time-series classification through a Python notebook and accompanying technical explanations. The notebook uses TensorFlow/Keras layers including Conv1D, LSTM and multi-head attention.
+
+## Start here
+
+- [Open the notebook](EEG-DL%20Transformer%2BConv1D%2BLSTM.ipynb).
+- Read the [technical report](Deep%20Learning%20in%20EEG%20Signal%20Processing_Advanced%20Methods_Technical%20Report.pdf) and [code explanation](Code%20Explanation.pdf).
+
+## Environment and data
+
+The notebook includes Google Colab Drive mounting and loads `inputdata.mat` and `labeldata.mat` from `/content/gdrive/MyDrive/`. Supply your own appropriately licensed data and update those paths and MAT field names. A local Jupyter run also requires adapting the Colab-specific cells.
+
+Imports include TensorFlow/Keras, NumPy, SciPy, scikit-learn, Matplotlib and psutil. Review the data-loading, shape conversion, label encoding and train/validation/test split cells before training. Dependency versions are not pinned here.
+
+## Interpreting results
+
+The notebook illustrates research methods and does not establish clinical diagnostic validation. For a new dataset, document its provenance and evaluate subject/session separation, leakage, class balance and suitable metrics. The background and model notes below explain the intended architecture and visualizations.
+
+## Detailed notes
 
 The use of advanced neural network architectures, such as Convolutional Neural Networks (CNNs), Long Short-Term Memory networks (LSTMs), and Transformers, highlights a sophisticated approach to handling the complex nature of EEG signals. Below is an explanation of how this code could be applied in the context of EEG signal processing, broken down into relevant sections:
 EEG Signal Characteristics
@@ -91,3 +111,11 @@ The preprocessing step includes a categorical conversion of target variables and
 The evaluation phase not only employs traditional classification metrics but also visualizes model performance over time and ROC curve, providing insights into the model's generalization capability and decision-making process.
 Callbacks such as EarlyStopping, ModelCheckpoint, and ReduceLROnPlateau are crucial for efficient training, preventing overfitting, saving the best model, and dynamically adjusting the learning rate.
 Overall, this script is a robust example of constructing and deploying advanced neural network models for classification tasks, demonstrating best practices in data handling, model architecture design, and performance evaluation.
+
+## Related work and collaboration
+
+Explore related repositories: [atr ftir 2dfft robustness](https://github.com/DeepDynaSim/atr-ftir-2dfft-robustness) · [skin lesion gnn stability](https://github.com/DeepDynaSim/skin-lesion-gnn-stability).
+
+[DeepDynaSim](https://github.com/DeepDynaSim) is an engineering R&D and consulting company in İzmir, Türkiye, focused on physics-guided AI, simulation and control. For engineering collaboration: [support@deepdynasim.com](mailto:support@deepdynasim.com). For repository questions, use [Issues](https://github.com/DeepDynaSim/EEG-DL-Transformer-Conv1D-LSTM/issues).
+
+Reuse follows the existing [LICENSE](LICENSE); academic authorship and third-party attribution remain with their respective creators.
